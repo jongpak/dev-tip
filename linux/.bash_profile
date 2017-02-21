@@ -28,4 +28,5 @@ C_BG_PURPLE="\[\033[45m\]"
 C_BG_CYAN="\[\033[46m\]"
 C_BG_LIGHTGRAY="\[\033[47m\]"
 
-export PS1="$C_BG_GREEN \W $C_DEFAULT $ "
+# export PS1="$C_BG_GREEN \W $C_DEFAULT $ "
+export PS1="$C_BG_GREEN \u \W $C_DEFAULT $ "
