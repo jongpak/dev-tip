@@ -1,9 +1,12 @@
-# dev-tip
-개발 팁 모음
+# 개발 팁 모음
 
-## 이클립스 설정
+## Git
 
-## 리눅스
+## 이클립스
+
+## Spring framework
+
+## Linux
 - .bashrc 설정
 
-### 페도라 환경세팅
+### fedora
