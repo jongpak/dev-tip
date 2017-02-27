@@ -98,6 +98,11 @@ docker rmi mysql:latest
 ```
 
 
+## 호스트 경로와 연동
+docker run -i -t -p 3306:3306 -v ~/dev:/home/web/dev --name mysql-local mysql /bin/bash
+- 옵선 -v HOST_PATH:CONTAINER_PATH: 호스트 경로와 컨테이너 경로를 연결한다
+
+
 ## 도커 네트워크 구조
 - http://bluese05.tistory.com/15
 
