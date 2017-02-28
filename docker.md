@@ -70,8 +70,7 @@ docker attach mysql-local
 ```
 
 ## 이미지 중단 없이 쉘에서 빠져나오기
-exit, Ctrl+D 를 누르면 컨테이너가 정지하며 (당연히 컨테이너가 정지되니) 빠져나오지만,
-**Ctrl+P, Ctrl+Q 를 차례대로 입력하면 컨테이너 중지없이 빠져나온다.**
+> exit, Ctrl+D 를 누르면 컨테이너가 정지하며 (당연히 컨테이너가 정지되니) 빠져나오지만, **Ctrl+P, Ctrl+Q 를 차례대로 입력하면 컨테이너 중지없이 빠져나온다.**
 
 
 ## 컨테이너 외부에서 컨터이너로 명령 실행하기
@@ -99,7 +98,9 @@ docker rmi mysql:latest
 
 
 ## 호스트 경로와 연동
+```
 docker run -i -t -p 3306:3306 -v ~/dev:/home/web/dev --name mysql-local mysql /bin/bash
+```
 - 옵선 -v HOST_PATH:CONTAINER_PATH: 호스트 경로와 컨테이너 경로를 연결한다
 
 
