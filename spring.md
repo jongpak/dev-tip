@@ -32,3 +32,6 @@
 ```
 
 ### tiles 설정
+
+
+## properties 사용
