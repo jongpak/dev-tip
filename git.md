@@ -12,7 +12,6 @@ git pull
 ```
 git config --global user.name "이름"
 git config --global user.email 이메일주소
-
 ```
 
 # gitignore 파일 생성하기
