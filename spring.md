@@ -123,7 +123,7 @@
 ```
 
 #### SpEL
-```
+```java
 @Value("#{dataSourceConfig['dataSource.driverClassName']}")
 private String driverClassName;
 ```
