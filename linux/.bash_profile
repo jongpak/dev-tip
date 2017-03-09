@@ -1,5 +1,19 @@
+# MAVEN PATH
+# export M2_HOME=~/dev/apache-maven
+# export M2=$M2_HOME/bin
+# export PATH=$M2:$PATH
+
+
+# GIT
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+
+# ALIAS
 alias ls="ls -lG"
 alias ll="ls -lG"
+
 
 # define colors
 C_DEFAULT="\[\033[m\]"
@@ -29,4 +43,5 @@ C_BG_CYAN="\[\033[46m\]"
 C_BG_LIGHTGRAY="\[\033[47m\]"
 
 # export PS1="$C_BG_GREEN \W $C_DEFAULT $ "
-export PS1="$C_BG_GREEN \u \W $C_DEFAULT $ "
+# export PS1="$C_BG_GREEN \u \W $C_DEFAULT $ "
+export PS1="$C_BG_GREEN \W $C_DEFAULT$C_LIGHTYELLOW\$(parse_git_branch)$C_DEFAULT $ "
