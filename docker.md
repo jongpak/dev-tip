@@ -1,9 +1,7 @@
 # 도커 운영
 ## 도커 설치
 ```
-wget -o ./docker_install.sh https://get.docker.com/
-chmod +x ./docker_install.sh
-sh ./docker_install.sh
+curl -sSL https://get.docker.com/ | sh
 ```
 
 
