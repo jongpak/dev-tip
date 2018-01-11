@@ -11,9 +11,17 @@ parse_git_branch() {
 
 
 # ALIAS
-alias ls="ls -lG"
-alias ll="ls -lG"
-
+case `uname` in
+    Linux)
+        alias ls="ls --color -h --group-directories-first"
+        alias ll="ls --color -h --group-directories-first"
+        ;;
+    Darwin)
+        alias ls="ls -lG"
+        alias ll="ls -lG"
+        ;;
+    *)
+esac
 
 # define colors
 C_DEFAULT="\[\033[m\]"
