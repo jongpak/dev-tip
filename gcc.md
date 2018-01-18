@@ -128,6 +128,8 @@ ELF Header:
 
 
 ## as (어셈블러) 옵션
+* TODO
 
 
 ## collect2 / ld (링커) 옵션
+* TODO
