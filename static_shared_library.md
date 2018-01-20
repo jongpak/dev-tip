@@ -125,4 +125,4 @@ root@f3b70a2804df:~# ls -al --color main_by*
 -rwxr-xr-x 1 root root   8112 Jan 20 08:01 main_by_static_lib
 -rwxr-xr-x 1 root root 949424 Jan 20 08:09 main_by_only_static_lib
 ```
-* 위의 경우 코드 사이즈가 작아서 별로 차이가 없지만..
+* 오르지 공유 라이브러리만 사용하면 바이너리 크기가 매우 커짐
