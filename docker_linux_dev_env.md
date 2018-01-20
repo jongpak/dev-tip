@@ -7,3 +7,5 @@
 ```bash
 docker run --rm -it ubuntu:16.04 /bin/bash
 ```
+
+* gcc 이미지 : https://hub.docker.com/_/gcc/
