@@ -70,8 +70,24 @@ $ gcc -o main_static_lib main.c -L./ -lexam
 
 ### 공유 라이브러리 컴파일 및 링크
 * 코드는 위의 `libexam.h`, `libexam.c`, `main.c` 코드를 그대로 사용
-```
-TODO
+```bash
+# 코드 위치에 상관없이 사용될 수 있는 오브젝트 파일로 컴파일 (-fPIC)
+$ gcc -fPIC -c libexam.c
+# 컴파일된 오브젝트 파일을 동적 라이브러리를 사용하도록 하여 링크
+#    -shared : 동적 라이브러리를 사용
+#    -soname : 공유라이브러리의 이름을 지정
+$ gcc -shared -Wl,-soname,libexam.so.0 -o libexam.so.0.0.0 libexam.o
+
+# 컴파일시 사용될 so 파일의 심볼릭 링크 생성 (컴파일러에서 사용)
+$ ln -s libexam.so.0.0.0 libexam.so
+# 컴파일된 파일이 실행시 찾을 so 파일의 심볼링 링크 생성 (실행파일에서 사용)
+$ ln -s libexam.so.0.0.0 libexam.so.0
+
+# 실행파일 컴파일
+$ gcc -o main main.c -L./ -lexam
+
+# 실행 (공유라이브러리 폴더를 임의로 지정)
+$ LD_LIBRARY_PATH=./ ./main
 ```
 
 
