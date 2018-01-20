@@ -55,7 +55,7 @@ $ gcc -c libexam.c
 $ ar rsv libexam.a libexam.o
 
 # 위에서 만든 정적라이브러리를 링크하여 컴파일
-$ gcc -o main_static_lib main.c -L./ -lexam
+$ gcc -o main_by_static_lib main.c -L./ -lexam
 ```
 
 
@@ -84,7 +84,7 @@ $ ln -s libexam.so.0.0.0 libexam.so
 $ ln -s libexam.so.0.0.0 libexam.so.0
 
 # 실행파일 컴파일
-$ gcc -o main main.c -L./ -lexam
+$ gcc -o main_by_shared_lib main.c -L./ -lexam
 
 # 실행 (공유라이브러리 폴더를 임의로 지정)
 $ LD_LIBRARY_PATH=./ ./main
@@ -93,6 +93,8 @@ $ LD_LIBRARY_PATH=./ ./main
 
 ## 정적 라이브러리 / 공유 라이브러리 실행파일 비교
 ```
-TODO
-ls -al ..
+root@f3b70a2804df:~# ls -al --color main_by*
+-rwxr-xr-x 1 root root 8040 Jan 20 07:50 main_by_shared_lib  # 공유 라이브러리가 더 작음
+-rwxr-xr-x 1 root root 8112 Jan 20 08:01 main_by_static_lib
 ```
+* 위의 경우 코드 사이즈가 작아서 별로 차이가 없지만..
