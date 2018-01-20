@@ -1,4 +1,8 @@
 # 정적 라이브러리 / 공유 라이브러리
+* 정적 라이브러리(Static Library) & 공유 라이브러리(Shared Library)
+    * http://sens.tistory.com/33
+* 동적 라이브러리(shared library)와 Linker/Loader 이해하기
+    * https://www.lesstif.com/pages/viewpage.action?pageId=12943542
 
 ## 1. 정적 라이브러리
 * 컴파일된 오브젝트 파일들이 하나의 파일로 묶여있는 형태
