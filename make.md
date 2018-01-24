@@ -133,3 +133,4 @@ clean:
 	done \
 	-rm -rf *.o $(TARGET)
 ```
+* 서브 Makefile에 매크로를 전달하고 싶다면 `export CC = gcc`와 같은 형태로 **export** 키워드를 붙임
