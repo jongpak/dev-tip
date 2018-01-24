@@ -56,3 +56,14 @@ test: 1.txt
 ======================
 TEST
 ```
+
+## 매크로 와일드카드 확장
+```make
+SRCS = $(whildcard *.c)
+OBJS = $(SRCS:.c=.o)
+
+all: test
+
+test: $(OBJS)
+	$(CC) -o $@ $^
+```
