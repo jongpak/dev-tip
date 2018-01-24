@@ -101,3 +101,35 @@ echo:
 skipable:
 	-cat temp.txt
 ```
+
+## 재귀적 make 사용
+각 폴더내의 Makefile
+```make
+OBJS   = $(patsubst %c, %o, $(wildcard *.c))
+CFLAGS = -I../include
+
+all: $(OBJS)
+	cp -rf $^ ../
+
+clean:
+	rm -rf *.c
+```
+
+상위 디렉토리의 Makefile
+* DIRS를 순회하며 재귀적 make
+```make
+DIRS   = lib1 lib2 main
+OBJS   = lib1.o lib2.o main.o
+TARGET = myapp
+
+all: objects
+	@for dir in $(DIRS); do \
+	make -C $$dir || exit $?; \
+	done
+	
+clean:
+	@for dir in $(DIRS); do \
+	make -C $$dir clean \
+	done \
+	-rm -rf *.o $(TARGET)
+```
