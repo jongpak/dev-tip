@@ -134,3 +134,18 @@ clean:
 	-rm -rf *.o $(TARGET)
 ```
 * 서브 Makefile에 매크로를 전달하고 싶다면 `export CC = gcc`와 같은 형태로 **export** 키워드를 붙임
+
+## 조건부 수행
+* ifeq .. else .. endif
+* ifneq .. else .. endif
+* ifdef .. else .. endif
+* ifndef .. else .. endif
+
+## 쉘 함수 수행
+```make
+RESULT = $(shell cat result.txt)
+```
+
+## 그외 함수
+* 문자열 처리 (sort / 공백제거 / 필터링 등..)
+* 파일 관련 등..
