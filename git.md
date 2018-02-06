@@ -16,3 +16,16 @@ git config --global user.email 이메일주소
 
 # gitignore 파일 생성하기
 - https://www.gitignore.io/
+
+# 커밋 메시지 수정
+```
+git rebase -i HEAD~4
+
+# 수정 하고자 하는 것 edit로 바꾸기
+git commit --amend
+# Author 를 바꾸고자 한다면
+git commit --amend --author="jongpak <jplabs@jongpak.com>"
+
+# 그이후에 아래 명령어로 계속 나아가면 됨
+git rebase --continue
+```
