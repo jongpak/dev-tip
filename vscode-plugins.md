@@ -1,5 +1,5 @@
 * Guides
-* empty-indent
+* Trailing Spaces
 * REST Client
 * vscode-icons
 * Beautify
