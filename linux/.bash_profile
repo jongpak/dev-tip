@@ -13,6 +13,7 @@ parse_git_branch() {
 # ALIAS
 case `uname` in
     Linux)
+        # https://superuser.com/a/109546
         alias ls="ls --color -h --group-directories-first"
         alias ll="ls --color -h --group-directories-first"
         ;;
