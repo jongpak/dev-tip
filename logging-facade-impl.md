@@ -16,4 +16,6 @@
     * logback
 
 
-http://ddakker.tistory.com/293
+### 참고
+* https://inyl.github.io/programming/2017/05/05/slf4j.html
+* http://ddakker.tistory.com/293
