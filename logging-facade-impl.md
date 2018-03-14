@@ -14,3 +14,6 @@
 * 대표적인 놈들
     * logj4 / log4j2
     * logback
+
+
+http://ddakker.tistory.com/293
