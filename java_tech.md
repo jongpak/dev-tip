@@ -11,3 +11,6 @@
 
 ### JAXB
 * https://docs.oracle.com/javase/tutorial/jaxb/TOC.html
+
+### RMI (Java Remote Method Invocation)
+* https://docs.oracle.com/javase/tutorial/rmi/TOC.html
